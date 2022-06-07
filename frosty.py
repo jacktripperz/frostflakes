@@ -116,7 +116,7 @@ def itterate():
     print(f"{timestampStr} Next cycle id: {nextCycleId}")
     print(f"{timestampStr} Next cycle type: {nextCycleType}")
     print(f"{timestampStr} Next cycle time: {nextCycleTime}")
-    print(f"{timestampStr} My locked frostflakes: {locked_frostFlakes} crops")
+    print(f"{timestampStr} My locked frostflakes: {locked_frostFlakes}")
     print(f"{timestampStr} Payout available for compound/claim: {my_rewards:.8f} BNB")
     print(f"{timestampStr} Minimum set for compound/claim: {cycleMinimumBnb:.8f} BNB")
     print("******************************")
