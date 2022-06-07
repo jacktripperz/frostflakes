@@ -5,43 +5,43 @@
       "id": 1,
       "type": "freeze",
       "endTimerAt": "20:10",
-      "minimumBnb": 0.008
+      "minimumBnb": 0.001
     },
     {
       "id": 2,
       "type": "freeze",
       "endTimerAt": "20:10",
-      "minimumBnb": 0.008
+      "minimumBnb": 0.001
     },
     {
       "id": 3,
       "type": "freeze",
       "endTimerAt": "20:10",
-      "minimumBnb": 0.008
+      "minimumBnb": 0.001
     },
     {
       "id": 4,
       "type": "freeze",
       "endTimerAt": "20:10",
-      "minimumBnb": 0.008
+      "minimumBnb": 0.001
     },
     {
       "id": 5,
       "type": "freeze",
       "endTimerAt": "20:10",
-      "minimumBnb": 0.008
+      "minimumBnb": 0.001
     },
     {
       "id": 6,
       "type": "freeze",
       "endTimerAt": "20:10",
-      "minimumBnb": 0.008
+      "minimumBnb": 0.001
     },
     {
       "id": 7,
       "type": "defrost",
       "endTimerAt": "20:10",
-      "minimumBnb": 0.008
+      "minimumBnb": 0.001
     }
   ]
 }
