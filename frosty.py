@@ -112,7 +112,7 @@ def itterate():
 
     sleep = loop_sleep_seconds 
     
-    print("********** Crops Farmer *******")
+    print("********** FrostFlakes *******")
     print(f"{timestampStr} Next cycle id: {nextCycleId}")
     print(f"{timestampStr} Next cycle type: {nextCycleType}")
     print(f"{timestampStr} Next cycle time: {nextCycleTime}")
@@ -136,10 +136,10 @@ def itterate():
         
         if nextCycleType == "compound":
             print("********** COMPOUNDED *******")
-            print(f"{timestampStr} COMPOUNDED {payoutTocompound:.8f} BNB to the pool!")
+            print(f"{timestampStr} COMPOUNDED {my_rewards:.8f} BNB to the pool!")
         if nextCycleType == "claim":
             print("********** CLAIMED ***********")
-            print(f"{timestampStr} CLAIMED {payoutTocompound:.8f} BNB!")
+            print(f"{timestampStr} CLAIMED {my_rewards:.8f} BNB!")
         
         print("**************************")
 
