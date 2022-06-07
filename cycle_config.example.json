@@ -1,0 +1,47 @@
+{
+  "nextCycleId": 1,
+  "cycle": [
+    {
+      "id": 1,
+      "type": "compound",
+      "endTimerAt": "20:10",
+      "minimumBnb": 0.008
+    },
+    {
+      "id": 2,
+      "type": "compound",
+      "endTimerAt": "20:10",
+      "minimumBnb": 0.008
+    },
+    {
+      "id": 3,
+      "type": "compound",
+      "endTimerAt": "20:10",
+      "minimumBnb": 0.008
+    },
+    {
+      "id": 4,
+      "type": "compound",
+      "endTimerAt": "20:10",
+      "minimumBnb": 0.008
+    },
+    {
+      "id": 5,
+      "type": "compound",
+      "endTimerAt": "20:10",
+      "minimumBnb": 0.008
+    },
+    {
+      "id": 6,
+      "type": "compound",
+      "endTimerAt": "20:10",
+      "minimumBnb": 0.008
+    },
+    {
+      "id": 7,
+      "type": "claim",
+      "endTimerAt": "20:10",
+      "minimumBnb": 0.008
+    }
+  ]
+}
