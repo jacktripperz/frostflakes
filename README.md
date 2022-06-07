@@ -1,9 +1,7 @@
-# Baked Beans Intro
+# FrostFlakes Intro
 
-Baked Beans is a daily ROI platform that allows
-you to earn up to 8% daily return on your investment sustainably through a tax system
-on transactions. It also allows team building through a referral system. 
-It is recommended to keep a 6-1 ratio, meaning you should rebake 6 times, eat 1 time, rebake 6 times, eat 1 time, etc.
+FrostFlakes is a daily ROI platform that allows
+you to earn up to 5% daily return on your investment sustainably through a static reward system and claim dependencies. It also allows team building through a referral system and airdrops. 
 
 ## Disclaimer
 Signing transactions via this script requires the use of a **`wallet's private key`** meaning you need to **`handle your private key locally`** on the computer from which you want to run this script on.
@@ -15,13 +13,13 @@ The script relies on many things - such as blockchain congestion, dropped networ
 1. A clean and secure computer/nuc/raspberry pi that can run 24/7.
 2. Minor programming knowledge
 
-## The Baked Beans
+## FrostFlakes
 
-The [Baked beans](https://bakedbeans.io?ref=0x361472B5784e83fBF779b015f75ea0722741f304) is a high risk, high reward contract that operates similar to a high yield 
+[FrostFlakes](https://www.frostflakes.org?ref=0x361472b5784e83fbf779b015f75ea0722741f304) is a high risk, high reward contract that operates similar to a high yield 
 certificate of deposit. You can participate by investing through these steps: 
-1. Go to [Baked beans](https://bakedbeans.io?ref=0x361472B5784e83fBF779b015f75ea0722741f304) and deposit a minimum of 0.1 BNB 
+1. Go to [FrostFlakes](https://www.frostflakes.org?ref=0x361472b5784e83fbf779b015f75ea0722741f304) and deposit a minimum of 0.1 BNB 
 
-The purpose of this code is to automate a rebake/eat strategy for you. 
+The purpose of this code is to automate a freeze/defrost (compound/claim) strategy for you. 
 
 ## Setup
 
@@ -65,38 +63,38 @@ $ python -m pip install python-dotenv
 9. Copy the file `cycle_config.example.json` and save it as `cycle_config.json`. This file contains the definition of your strategy cycle.  [See the Cycle settings](#cycle-settings) on how to modify your cycle strategy.
 
 ## Cycle settings
-The script includes a cycle-manager. This means that you can determine a cycle on when to `rebake` and when to `eat`.
+The script includes a cycle-manager. This means that you can determine a cycle on when to `freeze` and when to `defrost`.
 The file called `cycle_config.example.json` shows an example on how a cycle could look like.
 One cycle includes 4 inputs:
 - Id (1-indexed, meaning that the first cycle should always start with 1)
-- Type (either use `rebake` or `eat`)
+- Type (either use `freeze` or `defrost`)
 - EndTimerAt (Specifies the time of day where the cycle ends. For example with "20:00" (8pm) or "08:00" (8am). You can set the time of day as you please. By adding two or more cycles, you can setup your strategy to run every 3rd day, 12h or all the way down to each minute)
 - MinimumBnb (you might be able to rebake because 24h has past but you only want to rebake, when you have a minimum BNB of this value)
 
 Each cycle is defined by one iteration. Set as many iterations you want - just make sure to increment the `Id` of each iteration. When the cycle ends, it starts again from the top.
 
-Defaults for each iteration in the example is set to `rebake` and to execute every day at "20:00" (8pm).
+Defaults for each iteration in the example is set to `freeze` and to execute every day at "20:00" (8pm).
 
 ### Persisted cycle settings
 Cycle settings from your `cycle_config.json` are persisted. This means that the `nextCycleId` property is updated at the end of every cycle and you cycle loop never changes, so if you ever have to restart the script your cycle will never lose state and it will start from where it left off.
 
 ## Usage
 
-In a terminal window, navigate to the location where you saved all the files. Run the `beany.py` file.
+In a terminal window, navigate to the location where you saved all the files. Run the `frosty.py` file.
 
 ```bash
-$ python beany.py
+$ python frosty.py
 ```
 
 This terminal window will always need to remain open for the script to function. If the terminal window closes, just execute
-`python beany.py` again.
+`python frosty.py` again.
 
 # Donations
 If this script helps you, consider supporting me by sending an airdrop: 
 - **wallet:** *0x361472B5784e83fBF779b015f75ea0722741f304*
 
 Or using my referral code:
-- [Baked beans](https://bakedbeans.io?ref=0x361472B5784e83fBF779b015f75ea0722741f304)
+- [FrostFlakes](https://www.frostflakes.org?ref=0x361472b5784e83fbf779b015f75ea0722741f304)
 
 
 # Other projects to take a look at:
