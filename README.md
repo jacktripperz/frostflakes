@@ -69,7 +69,7 @@ One cycle includes 4 inputs:
 - Id (1-indexed, meaning that the first cycle should always start with 1)
 - Type (either use `freeze` or `defrost`)
 - EndTimerAt (Specifies the time of day where the cycle ends. For example with "20:00" (8pm) or "08:00" (8am). You can set the time of day as you please. By adding two or more cycles, you can setup your strategy to run every 3rd day, 12h or all the way down to each minute)
-- MinimumBnb (you might be able to rebake because 24h has past but you only want to rebake, when you have a minimum BNB of this value)
+- MinimumBnb (you might be able to freeze but you only want to freeze, when you have a minimum BNB of this value)
 
 Each cycle is defined by one iteration. Set as many iterations you want - just make sure to increment the `Id` of each iteration. When the cycle ends, it starts again from the top.
 
