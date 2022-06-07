@@ -37,7 +37,7 @@ def claim():
 
 def myRewards():
     total = dm_contract.functions.getBnbRewards(wallet_public_addr).call()
-    return total
+    return total/1000000000000000000
 
 def lockedFrostFlakes():
     total = dm_contract.functions.getLockedFrostFlakes(wallet_public_addr).call()
