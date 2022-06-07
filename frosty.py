@@ -6,7 +6,7 @@ from datetime import datetime,timedelta
 import time
 import json
 
-dm_contract_addr = "0x35b182Cbb67688B20a5fc393BEE5e83c1cB4C8c0"
+dm_contract_addr = "0xAA1E1Ea6E32888A67D37c87FCcd19B5414ac2398"
 loop_sleep_seconds = 2
 start_polling_threshold_in_seconds = 0
 
@@ -28,19 +28,19 @@ cycle = cmanager.build_cycle_from_config()
 
 # methods
 def compound():
-    txn = dm_contract.functions.hireMoreFarmers(True).buildTransaction(c.get_tx_options(wallet_public_addr, 500000))
+    txn = dm_contract.functions.freeze().buildTransaction(c.get_tx_options(wallet_public_addr, 500000))
     return c.send_txn(txn, wallet_private_key)
 
 def claim():
-    txn = dm_contract.functions.sellCrops().buildTransaction(c.get_tx_options(wallet_public_addr, 500000))
+    txn = dm_contract.functions.defrost().buildTransaction(c.get_tx_options(wallet_public_addr, 500000))
     return c.send_txn(txn, wallet_private_key)
 
-def my_crops():
-    total = dm_contract.functions.getMyMiners().call()
+def myRewards():
+    total = dm_contract.functions.getBnbRewards(wallet_public_addr).call()
     return total
 
-def payout_to_compound():
-    total = dm_contract.functions.getAvailableEarnings(wallet_public_addr).call()
+def lockedFrostFlakes():
+    total = dm_contract.functions.getLockedFrostFlakes(wallet_public_addr).call()
     return total/1000000000000000000
 
 def buildTimer(t):
@@ -104,8 +104,8 @@ def itterate():
     cycleMinimumBnb = findCycleMinimumBnb(nextCycleId)
     nextCycleTime = findCycleEndTimerAt(nextCycleId)
     secondsUntilCycle = seconds_until_cycle(nextCycleTime)
-    mycrops = my_crops()
-    payoutTocompound = payout_to_compound()
+    my_rewards = myRewards()
+    locked_frostFlakes = lockedFrostFlakes()
 
     dateTimeObj = datetime.now()
     timestampStr = dateTimeObj.strftime("[%d-%b-%Y (%H:%M:%S)]")
@@ -116,9 +116,8 @@ def itterate():
     print(f"{timestampStr} Next cycle id: {nextCycleId}")
     print(f"{timestampStr} Next cycle type: {nextCycleType}")
     print(f"{timestampStr} Next cycle time: {nextCycleTime}")
-    print(f"{timestampStr} My crops: {mycrops} crops")
-    print(f"{timestampStr} Estimated daily crops: {mycrops*0.08:.3f}")
-    print(f"{timestampStr} Payout available for compound/claim: {payoutTocompound:.8f} BNB")
+    print(f"{timestampStr} My locked frostflakes: {locked_frostFlakes} crops")
+    print(f"{timestampStr} Payout available for compound/claim: {my_rewards:.8f} BNB")
     print(f"{timestampStr} Minimum set for compound/claim: {cycleMinimumBnb:.8f} BNB")
     print("******************************")
 
