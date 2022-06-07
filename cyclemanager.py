@@ -1,5 +1,5 @@
 import json
-# cycle types are "compound" or "claim"
+# cycle types are "freeze" or "defrost"
 
 class Iteration: 
     def __init__(self, id, type, endTimerAt, minimumBnb): 
