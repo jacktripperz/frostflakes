@@ -41,7 +41,7 @@ def myRewards():
 
 def lockedFrostFlakes():
     total = dm_contract.functions.getLockedFrostFlakes(wallet_public_addr).call()
-    return total/1000000000000000000
+    return total
 
 def buildTimer(t):
     mins, secs = divmod(int(t), 60)
@@ -129,15 +129,15 @@ def itterate():
     payoutTocompound = payout_to_compound()
 
     if payoutTocompound >= cycleMinimumBnb:
-        if nextCycleType == "compound":
+        if nextCycleType == "freeze":
             compound()
-        if nextCycleType == "claim":
+        if nextCycleType == "defrost":
             claim()
         
-        if nextCycleType == "compound":
+        if nextCycleType == "freeze":
             print("********** COMPOUNDED *******")
             print(f"{timestampStr} COMPOUNDED {my_rewards:.8f} BNB to the pool!")
-        if nextCycleType == "claim":
+        if nextCycleType == "defrost":
             print("********** CLAIMED ***********")
             print(f"{timestampStr} CLAIMED {my_rewards:.8f} BNB!")
         
