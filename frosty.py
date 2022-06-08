@@ -126,9 +126,9 @@ def itterate():
 
     countdown(int(sleep))
 
-    payoutTocompound = payout_to_compound()
+    rewards = myRewards()
 
-    if payoutTocompound >= cycleMinimumBnb:
+    if my_rewards >= cycleMinimumBnb:
         if nextCycleType == "freeze":
             compound()
         if nextCycleType == "defrost":
@@ -136,10 +136,10 @@ def itterate():
         
         if nextCycleType == "freeze":
             print("********** COMPOUNDED *******")
-            print(f"{timestampStr} COMPOUNDED {my_rewards:.8f} BNB to the pool!")
+            print(f"{timestampStr} COMPOUNDED {rewards:.8f} BNB to the pool!")
         if nextCycleType == "defrost":
             print("********** CLAIMED ***********")
-            print(f"{timestampStr} CLAIMED {my_rewards:.8f} BNB!")
+            print(f"{timestampStr} CLAIMED {rewards:.8f} BNB!")
         
         print("**************************")
 
