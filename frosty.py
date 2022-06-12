@@ -128,7 +128,7 @@ def itterate():
 
     rewards = myRewards()
 
-    if my_rewards >= cycleMinimumBnb:
+    if rewards >= cycleMinimumBnb:
         if nextCycleType == "freeze":
             compound()
         if nextCycleType == "defrost":
