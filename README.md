@@ -1,7 +1,6 @@
 # FrostFlakes Intro
 
-FrostFlakes is a daily ROI platform that allows
-you to earn up to 5% daily return on your investment sustainably through a static reward system and claim dependencies. It also allows team building through a referral system and airdrops. 
+FrostFlakes is a daily ROI platform that allows you to earn 2% daily return on your investment sustainably through a static reward system and claim dependencies. It also allows team building through a referral system and airdrops. 
 
 ## Disclaimer
 Signing transactions via this script requires the use of a **`wallet's private key`** meaning you need to **`handle your private key locally`** on the computer from which you want to run this script on.
